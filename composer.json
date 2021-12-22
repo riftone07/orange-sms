@@ -1,6 +1,9 @@
 {
     "name": "riftone07/orange-sms",
     "description": "Un package pour envoyer des sms via l'api de orange middle africa",
+    "type": "library",
+    "keywords": ["sms","orange sms", "sms marketing","api orange sms ","sms senegal","sms africa","orange","laravel sm","sms"],
+    "license": "MIT",
     "authors": [
         {
             "name": "cherif diallo",
@@ -13,8 +16,14 @@
 
         }
     },
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.4"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Riftone07\\OrangeSms\\SmsServiceProvider"
+            ]
+        }
     }
 }

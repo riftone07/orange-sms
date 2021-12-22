@@ -15,7 +15,7 @@ class Sendsmsorange
                 'grant_type' => 'client_credentials'
             ],
             'headers' => [
-                'Authorization' => "Basic YnRuakJhbXlwc0c0eGFRNVNOODBDMjdLSzZySXk0dEs6Z3k2SVhsd3RHYjZOd3pLcQ==",
+                'Authorization' => "Basic ".env('AUTHORIZATION_HEADER'),
                 'Content-Type' => 'application/x-www-form-urlencoded',
                 'Accept' => 'application/json'
             ]
