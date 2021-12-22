@@ -1,0 +1,20 @@
+{
+    "name": "riftone07/orange-sms",
+    "description": "Un package pour envoyer des sms via l'api de orange middle africa",
+    "authors": [
+        {
+            "name": "cherif diallo",
+            "email": "riftone07@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Riftone07\\OrangeSms\\": "src/"
+
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4"
+    }
+}
