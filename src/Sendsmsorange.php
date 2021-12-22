@@ -32,7 +32,7 @@ class Sendsmsorange
             'Content-Type' => 'application/json'
         ])->post('https://api.orange.com/smsmessaging/v1/outbound/tel%3A%2B2210000/requests', [
             "outboundSMSMessageRequest" => [
-                "address" => 'tel:'.normalizePhoneNumberSender($telephone),
+                "address" => 'tel:'.$this->normalizePhoneNumberSender($telephone),
                 "senderAddress" => "tel:+2210000",
                 "outboundSMSTextMessage" => [
                     "message" => $message
@@ -41,5 +41,17 @@ class Sendsmsorange
         ]);
 
         return 'Sms envoyé avec success';
+    }
+
+
+    private function normalizePhoneNumberSender($phone)
+    {
+        $phone = (string) $phone;
+
+        if (substr($phone, 0, 4) !== '+221') {
+            return '+221' . $phone;
+        }
+
+        return $phone;
     }
 }
